@@ -1,12 +1,37 @@
 {
-  "name": "treino",
+  "name": "boilerplate-js-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple architecture for Javascript applications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clear": "rm -rf ./dist",
+    "start": "npm run clear && webpack-dev-server --mode development --open",
+    "build": "npm run clear && webpack --mode production",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyPersonalLab/boilerplate-js-app.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyPersonalLab/boilerplate-js-app/issues"
+  },
+  "homepage": "https://github.com/MyPersonalLab/boilerplate-js-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass": "^1.16.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
 }

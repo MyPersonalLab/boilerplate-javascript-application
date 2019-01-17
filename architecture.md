@@ -2,9 +2,12 @@
         https://webpack.js.org/
         https://www.valentinog.com/blog/webpack-tutorial/
 
-        -> ES6, Modules, Bundle, Development and Production env
-        -> Sass - https://sass-lang.com/
-        -> HTML minified
+        OK -> ES6, Modules, Bundle, Development and Production env
+        OK -> Sass - https://sass-lang.com/
+        OK -> HTML minified
+
+    HTML
+        -> Criar html base
 
     Acessible
         -> https://a11y-style-guide.com/style-guide/section-forms.html
