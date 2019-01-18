@@ -6,7 +6,7 @@
   "scripts": {
     "clear": "rm -rf ./dist",
     "start": "npm run clear && webpack-dev-server --mode development --open",
-    "build": "npm run clear && webpack --mode production",
+    "build": "npm run clear && webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",

@@ -4,11 +4,13 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
+const ASSETS_PATH = 'assets';
+
 module.exports = {
-    entry: './src/assets/scripts/index.js',
+    entry: './entry.js',
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: 'assets/scripts/[name].js',
+        filename: `${ASSETS_PATH}/scripts/[name].[hash:8].js`,
     },
     module: {
         rules: [
@@ -39,7 +41,18 @@ module.exports = {
                             implementation: require("sass")
                         }
                     }
-                    ]
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: `${ASSETS_PATH}/images/[name].[hash:8].[ext]`
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -54,7 +67,7 @@ module.exports = {
             filename: "./index.html"
         }),
         new MiniCssExtractPlugin({
-            filename: "assets/styles/[name].css"
+            filename: `${ASSETS_PATH}/styles/[name].[hash:8].css`
         })
     ]
 };
