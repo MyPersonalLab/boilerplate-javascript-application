@@ -17,8 +17,8 @@
         -> StyleLint - https://stylelint.io
 
     Testes and Coverage
-        -> Jest - https://jestjs.io/
-        -> coveralls
+        OK -> Jest - https://jestjs.io/
+        OK -> coveralls
             - https://medium.com/@ollelauribostr/start-measuring-coverage-with-jest-travis-ci-and-coveralls-1867928aca42
 
         -> Travis CI - https://travis-ci.org/
