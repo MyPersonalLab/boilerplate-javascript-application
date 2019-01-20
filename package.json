@@ -4,13 +4,15 @@
   "description": "A simple architecture for Javascript applications",
   "main": "index.js",
   "scripts": {
-    "clear": "rm -rf ./dist",
-    "start": "npm run clear && webpack-dev-server --mode development --open",
-    "build": "npm run clear && webpack --mode production",
+    "clear:server": "rm -rf ../server/public/**",
+    "clear:dist": "rm -rf ./dist",
+    "start": "npm run clear:dist && webpack-dev-server --mode development --open",
+    "build": "npm run clear:server && cross-env NODE_ENV=production webpack --mode production",
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "eslint": "npx eslint ./src/**/*.js",
-    "stylelint": "npx stylelint ./src/**/*.scss"
+    "stylelint": "npx stylelint ./src/**/*.scss",
+    "doc": "npx jsdoc ./src/assets/scripts/index.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.5",
     "coveralls": "^3.0.2",
+    "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.12.1",
     "eslint-config-airbnb-base": "^13.1.0",

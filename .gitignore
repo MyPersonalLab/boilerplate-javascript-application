@@ -33,6 +33,8 @@ bower_components
 build/Release
 dist/
 build/
+out/
+coverage/
 
 # Dependency directories
 node_modules/
@@ -61,6 +63,3 @@ typings/
 
 # next.js build output
 .next
-
-# coverage directory
-coverage

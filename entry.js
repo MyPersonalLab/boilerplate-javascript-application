@@ -1,3 +1,6 @@
-import "./src/assets/images/google-logo.png";
-import "./src/assets/styles/main.scss";
-import "./src/assets/scripts/index.js";
+/**
+ * Import all your initial settings
+ */
+
+import './src/assets/styles/main.scss';
+import './src/assets/scripts/main';
