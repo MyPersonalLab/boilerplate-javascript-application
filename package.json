@@ -1,0 +1,20 @@
+{
+  "name": "boilerplate-javascript-application",
+  "version": "1.0.0",
+  "description": "A simple architecture for Javascript applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyPersonalLab/boilerplate-javascript-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyPersonalLab/boilerplate-javascript-application/issues"
+  },
+  "homepage": "https://github.com/MyPersonalLab/boilerplate-javascript-application#readme"
+}
