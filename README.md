@@ -1,4 +1,4 @@
-# boilerplate-js-app
+# boilerplate-javascript-application
 A simple architecture for Javascript applications
 
 ### Commands
