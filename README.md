@@ -17,4 +17,4 @@ If you want install server and client dependencies first
 
 and start server and client app after
 
-```npm runstart:app```
+```npm run start:app```
