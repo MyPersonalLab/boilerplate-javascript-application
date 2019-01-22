@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const sass = require('sass');
 
@@ -12,7 +13,7 @@ const ASSETS_PATH = 'assets';
 const ROOT_PAGE_PATH = '.';
 const OUTPUT_PATH = isProduction() ? '../server/public' : 'dist';
 
-module.exports = {
+const config = {
   entry: './entry.js',
   output: {
     path: path.resolve(__dirname, OUTPUT_PATH),
@@ -62,11 +63,6 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    minimizer: [
-      new OptimizeCSSAssetsPlugin({}),
-    ],
-  },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
@@ -77,3 +73,14 @@ module.exports = {
     }),
   ],
 };
+
+if (isProduction()) {
+  config.optimization = {
+    minimizer: [
+      new OptimizeCSSAssetsPlugin({}),
+      new UglifyJsPlugin(),
+    ],
+  };
+}
+
+module.exports = config;

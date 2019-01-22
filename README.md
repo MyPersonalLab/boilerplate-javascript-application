@@ -1,16 +1,20 @@
 # boilerplate-javascript-application
 A simple architecture for Javascript applications
 
+### How to use
+
+first install Node.js then execute some command of your choice 
+
 ### Commands
 
-Run a local server
+just start all application
 
 ```npm run start```
 
-Run production version
+If you want install server and client dependencies first
 
-```npm run build```
+```npm run install:app```
 
-Run tests
+and start server and client app after
 
-```npm run test```
+```npm runstart:app```

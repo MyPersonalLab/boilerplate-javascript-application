@@ -4,7 +4,14 @@
   "description": "A simple architecture for Javascript applications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:client": "cd ./client && npm install && cd ..",
+    "install:server": "cd ./server && npm install && cd ..",
+    "install:app": "npm run install:client | npm run install:server",
+    "start:client": "cd ./client && npm run build && cd ..",
+    "start:server": "cd ./server && npm run start",
+    "start:app": "npm run start:client | npm run start:server",
+    "start": "npm run install:app && npm run start:app"
+
   },
   "repository": {
     "type": "git",
